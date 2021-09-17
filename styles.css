@@ -1,0 +1,23 @@
+body{
+    margin: 0px;
+}
+.main-container{
+    display: block;
+    text-align: center;
+}
+h1{
+    margin: 0px;
+}
+.header{
+    padding: 2rem;
+    background-color: aqua;
+}
+#submit-btn{
+    background-color: aqua;
+    border: none;
+    border-radius: 1.2rem;
+    padding: 1rem 2rem;
+}
+.output-div{
+    margin: 2rem;
+}

@@ -16,9 +16,10 @@ function submitBtnClickHandler() {
       outputEl.innerText = "yes it is a palindrome";
     } else {
       var [ctr, nextDate] = getNextPalindrome(date);
+      var [ctd ,prevDate] = getPrevPalindrome(date);
       // var nextPal = getNextPalindrome(date);
       // var closePal = closePalindrome();
-      outputEl.innerText = `your next palindrome date : ${nextDate.day}-${nextDate.month}-${nextDate.year} you missed by ${ctr} days  😞😩`;
+      outputEl.innerText = `Your Next Palindrome Date : ${nextDate.day}-${nextDate.month}-${nextDate.year} you missed by ${ctr} and Previous Palindrome Date was : ${prevDate.day}-${prevDate.month}-${prevDate.year} you missed by ${ctd} days ago 😞😩 `;
     }
   }
 }
