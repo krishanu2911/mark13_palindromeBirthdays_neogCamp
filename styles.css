@@ -21,7 +21,9 @@ h1{
     padding: 1rem 2rem;
 }
 .output-div{
-    margin: 2rem;
+    max-width: 600px;
+
+    margin: auto;
 }
 #output{
     font-size: larger;
