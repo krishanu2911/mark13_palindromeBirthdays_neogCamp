@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap');
 body{
     margin: 0px;
+    font-family: 'Lato', sans-serif;
 }
 .main-container{
     display: block;
@@ -10,14 +12,22 @@ h1{
 }
 .header{
     padding: 2rem;
-    background-color: aqua;
+    background-color: #F9A8D4;
 }
 #submit-btn{
-    background-color: aqua;
+    background-color: #F9A8D4;
     border: none;
     border-radius: 1.2rem;
     padding: 1rem 2rem;
 }
 .output-div{
     margin: 2rem;
+}
+#output{
+    font-size: larger;
+}
+.end-div{
+    background-color: #F472B6;
+    
+    padding: 2rem 2rem 5rem 2rem;
 }

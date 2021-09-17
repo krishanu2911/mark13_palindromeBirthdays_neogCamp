@@ -13,7 +13,7 @@ function submitBtnClickHandler() {
     };
     var ispalindrome = checkPalindromeForAllDateFormat(date);
     if (ispalindrome) {
-      outputEl.innerText = "yes it is a palindrome";
+      outputEl.innerText = "Yes it's a Palindrome Date 🎉🎊🎉";
     } else {
       var [ctr, nextDate] = getNextPalindrome(date);
       var [ctd ,prevDate] = getPrevPalindrome(date);
