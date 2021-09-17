@@ -109,6 +109,65 @@ function getNextDate(date){
     
 
 }
+
+function getPrevDate(date) {
+    var day = date.day - 1;
+    var month = date.month;
+    var year = date.year;
+  
+    var daysInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+  
+    if (day === 0) {
+      month--;
+  
+      if (month === 0) {
+        month = 12;
+        day = 31;
+        year--;
+      } else if (month === 2) {
+        if (isLeapYear(year)) {
+          day = 29;
+        } else {
+          day = 28;
+        }
+      } else {
+        day = daysInMonth[month - 1];
+      }
+    }
+  
+    return {
+      day: day,
+      month: month,
+      year: year,
+    };
+  }
+  function getPrevPalindrome(date) {
+    var prevDate = getPrevDate(date);
+    var ctr = 0;
+  
+    while (1) {
+      ctr++;
+    //   var dateStr = getDateAsString(previousDate);
+      var ispalindrome = checkPalindromeForAllDateFormat(prevDate);
+  
+      if(ispalindrome){
+          break;
+      }
+      prevDate =  getPrevDate(prevDate);
+    }
+    return [ctr , prevDate];
+  }
+
+function closePalindrome (){
+    if (getPrevPalindrome(date)[0] > getNextPalindrome(date)[0]){
+        return getNextPalindrome(date);
+    }
+    else{
+         return getPrevPalindrome(date);
+    }
+}
+  
+
 function getNextPalindrome(date){
     var ctr = 0;
     var nextDate = getNextDate(date);
@@ -127,9 +186,11 @@ function getNextPalindrome(date){
 
 var date = {
     day : 11,
-    month: 2,
+    month: 3,
     year: 2021
 }
+console.log(getPrevPalindrome(date));
 console.log(getNextPalindrome(date));
+console.log(closePalindrome());
 
 
